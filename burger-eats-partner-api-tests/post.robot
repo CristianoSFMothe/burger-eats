@@ -3,15 +3,19 @@ Documentation        Tests API Partner
 ...                  Post /partners
 
 Library              RequestsLibrary
+Library              RobotMongoDBLibrary.Delete
 
 
 *** Variables ***
 ${BASE_URL}            http://localhost:3333/partners
+&{MONGO_URI}           connection=mongodb+srv://burgereats:dzOqrJwHFDH1dArr@cluster0.gasypkv.mongodb.net/PartnerDB?retryWrites=true&w=majority
+...                    database=PartnerDB     collection=partner
+
 
 *** Test Cases ***
 Should Create a New Partner
     ${payload}        Create Dictionary
-    ...               name=Pizzas Mother
+    ...               name=Pizzas Mothe
     ...               email=contato@mothe.com
     ...               whatsapp=21988775566
     ...               business=Restaurante
@@ -20,6 +24,11 @@ Should Create a New Partner
     ...               Content-Type=application/json
     ...               auth_user=qa
     ...               auth_password=ninja
+    
+    ${filter}         Create Dictionary
+    ...               name=Pizzas Mothe
+
+    Delete One        ${MONGO_URI}   ${filter} 
     
     ${response}       POST              ${BASE_URL}    
     ...               json=${payload}    
