@@ -65,3 +65,7 @@ pip install robot-mongodb-library
 ```bash
 pip install "pymongo[srv]"
 ```
+
+## Status Code
+
+Por padrão a library HTTP Requests, só aceita *status code* da família *200*, iy seja sucesso. Para implementar outros tipos de status, é necessário investigar na documentação oficial da <a href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html" target="blank">HTTP Requests Library</a>
