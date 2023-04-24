@@ -8,3 +8,13 @@ def factory_new_partner():
     }
     
     return partner
+
+def factory_dup_name():
+    partner = {
+        'name': 'Adega do João',
+        'email': 'contato@adegajoao.com.br',
+        'whatsapp': '21988776655',
+        'business': 'Conveniência'
+    }
+    
+    return partner

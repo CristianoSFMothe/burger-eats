@@ -10,6 +10,7 @@ ${BASE_URL}           http://localhost:3333/partners
 ...                   auth_user=qa
 ...                   auth_password=ninja
 
+
 *** Keywords ***
 POST Partner
     [Arguments]        ${payload}
@@ -17,6 +18,7 @@ POST Partner
     ${response}       POST              ${BASE_URL}    
     ...               json=${payload}    
     ...               headers=${HEADERS}
+    ...               expected_status=any
     
     [Return]          ${response}
 
