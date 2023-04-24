@@ -19,6 +19,27 @@ def factory_dup_name():
     
     return partner
 
+def factory_enable_partner():
+    partner = {
+        'name': 'Doceria Mothe',
+        'email': 'docearia@gmail.com.br',
+        'whatsapp': '21988770005',
+        'business': 'Conveniência'
+    }
+    
+    return partner
+
+def factory_404_partner():
+    partner = {
+        'name': 'Frangão',
+        'email': 'docearia@frangao.com.br',
+        'whatsapp': '21988770007',
+        'business': 'Conveniência'
+    }
+    
+    return partner
+
+
 def factory_partner_list():
     p_list = [
         
