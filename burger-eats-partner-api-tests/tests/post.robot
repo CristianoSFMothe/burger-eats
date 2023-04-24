@@ -4,16 +4,14 @@ Documentation        Tests API Partner
 
 Resource            ../resources/base.resource
 
+
 *** Test Cases ***
 Should Create a New Partner
-    ${payload}        Create Dictionary
-    ...               name=Pizzas Mothe
-    ...               email=contato@mothe.com
-    ...               whatsapp=21988775566
-    ...               business=Restaurante    
-    Remove Partner By Name    Pizzas Mothe    
+    ${partner}        Factory New Partner   
+
+    Remove Partner By Name    Pizzas Mothe
     
-    ${response}       POST Partner    ${payload}
+    ${response}       POST Partner    ${partner}
     
     Status Should Be    201
     ${results}          Find Partmer By Name              Pizzas Mothe
