@@ -7,7 +7,9 @@ Resource            ../resources/base.resource
 Suite Setup        Create Partner List
 
 *** Test Cases ***
-Should Return a Partner List    
+Should Return a Partner List 
+    [Documentation]    Retornar a lista dos parceiros cadastrados
+    [Tags]             get_list   
 
     ${response}         GET Partners
     Status Should Be    200
@@ -18,6 +20,8 @@ Should Return a Partner List
 
 
 Should Search Partner By Name
+    [Documentation]      Retornar um parceiro especifico pelo nome
+    [Tags]               get_by_name
 
     ${response}          Search Partner    São Francisco
     Status Should Be     200 
