@@ -22,7 +22,8 @@ POST Partner
     
     [Return]          ${response}
 
-POST Partners
+
+GET Partners
 
     ${response}       GET              ${BASE_URL}      
     ...               headers=${HEADERS}
@@ -30,3 +31,14 @@ POST Partners
     
     [Return]          ${response}
 
+Search Partner
+    [Arguments]        ${name}
+
+    ${query}    Create Dictionary    name=${name}
+
+    ${response}    GET     ${BASE_URL}
+    ...            params=${query}
+    ...            headers=${HEADERS}
+    ...            expected_status=any
+    
+    [Return]        ${response}
