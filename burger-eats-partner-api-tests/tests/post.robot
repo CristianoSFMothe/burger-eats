@@ -4,7 +4,6 @@ Documentation        Tests API Partner
 
 Resource            ../resources/base.resource
 
-
 *** Test Cases ***
 Should Create a New Partner
     ${partner}        Factory New Partner   
@@ -20,7 +19,7 @@ Should Create a New Partner
 
 Should Return Duplicate Company name
     [Tags]            dup_name
-    
+
     ${partner}        Factory Dup Name
 
     Remove Partner By Name    ${partner}[name]

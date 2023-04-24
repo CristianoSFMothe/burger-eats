@@ -22,3 +22,11 @@ POST Partner
     
     [Return]          ${response}
 
+POST Partners
+
+    ${response}       GET              ${BASE_URL}      
+    ...               headers=${HEADERS}
+    ...               expected_status=any
+    
+    [Return]          ${response}
+

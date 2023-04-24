@@ -18,3 +18,29 @@ def factory_dup_name():
     }
     
     return partner
+
+def factory_partner_list():
+    p_list = [
+        
+        {
+            'name': 'Mercearia Mothe',
+            'email': 'contato@mmothe.com.br',
+            'whatsapp': '21988770001',
+            'business': 'Conveniência'
+        },
+        {
+            'name': 'Mercadinho São Francisco',
+            'email': 'contato@msf.com.br',
+            'whatsapp': '21988770002',
+            'business': 'Supermercado'
+        },
+        {
+            'name': 'Bom de Prato',
+            'email': 'contato@bomdeprato.com.br',
+            'whatsapp': '21988770003',
+            'business': 'Restaurante'
+        },
+    ]
+    
+    
+    return p_list
