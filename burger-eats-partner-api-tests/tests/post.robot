@@ -8,6 +8,8 @@ Resource            ../resources/base.resource
 Should Create a New Partner
     [Documentation]    Criar um novo parceiro
     [Tags]             post
+
+    Purge All Messages
     
     ${partner}        Factory New Partner   
 
@@ -18,6 +20,12 @@ Should Create a New Partner
     Status Should Be    201
     ${results}          Find Partmer By Name              ${partner}[name]
     Should Be Equal     ${response.json()}[partner_id]    ${results}[_id]
+
+    ${message}      Get Message
+    Log             ${message}[payload]
+
+    Should Contain    ${message}[payload]    ${partner}[email]
+
 
 
 Should Return Duplicate Company name
