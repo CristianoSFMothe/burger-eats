@@ -29,6 +29,26 @@ def factory_enable_partner():
     
     return partner
 
+def factory_enable_partner():
+    partner = {
+        'name': 'Doceria Mothe',
+        'email': 'docearia@gmail.com.br',
+        'whatsapp': '21988770005',
+        'business': 'Conveniência'
+    }
+    
+    return partner
+
+def factory_disable_partner():
+    partner = {
+        'name': 'Mercado Noite Feliz',
+        'email': 'mercado_noite@gmail.com.br',
+        'whatsapp': '21988770005',
+        'business': 'Supermercado'
+    }
+    
+    return partner
+
 def factory_404_partner():
     partner = {
         'name': 'Frangão',

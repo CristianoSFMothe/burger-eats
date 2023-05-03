@@ -52,3 +52,12 @@ Enable Partner
     ...                expected_status=any
     
     [Return]           ${response}
+
+Disable Partner
+    [Arguments]        ${parnter_id}
+
+    ${response}        PUT        ${BASE_URL}/${parnter_id}/disable
+    ...                headers=${HEADERS}
+    ...                expected_status=any
+    
+    [Return]           ${response}
