@@ -49,6 +49,16 @@ def factory_disable_partner():
     
     return partner
 
+def factory_remove_partner():
+    partner = {
+        'name': 'Adega do Baixino',
+        'email': 'contato@adb.com.br',
+        'whatsapp': '21988770005',
+        'business': 'Conveniência'
+    }
+    
+    return partner
+
 def factory_404_partner():
     partner = {
         'name': 'Frangão',

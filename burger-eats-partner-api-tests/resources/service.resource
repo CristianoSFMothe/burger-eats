@@ -45,18 +45,27 @@ Search Partner
 
 
 Enable Partner
-    [Arguments]        ${parnter_id}
+    [Arguments]        ${partner_id}
 
-    ${response}        PUT        ${BASE_URL}/${parnter_id}/enable
+    ${response}        PUT        ${BASE_URL}/${partner_id}/enable
     ...                headers=${HEADERS}
     ...                expected_status=any
     
     [Return]           ${response}
 
 Disable Partner
-    [Arguments]        ${parnter_id}
+    [Arguments]        ${partner_id}
 
-    ${response}        PUT        ${BASE_URL}/${parnter_id}/disable
+    ${response}        PUT        ${BASE_URL}/${partner_id}/disable
+    ...                headers=${HEADERS}
+    ...                expected_status=any
+    
+    [Return]           ${response}
+
+Delete Partner
+    [Arguments]        ${partner_id}
+
+    ${response}        DELETE        ${BASE_URL}/${partner_id}
     ...                headers=${HEADERS}
     ...                expected_status=any
     

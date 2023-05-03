@@ -36,6 +36,9 @@ Should Search Partner By Name
 #  Gancho para os testes acima
 *** Keywords ***
 Create Partner List
+    [Documentation]        Criação de um novo parceiro
+    [Tags]                 Create
+    
     ${partners}          Factory Partner List
 
     FOR    ${p}    IN    @{partners}

@@ -32,7 +32,7 @@ Should Dissable a Partner
 
 Should Return 404 On Enable a Partner
     [Documentation]    Retornar erro caso não encontre o parceiro pelo ID
-    [Tags]             404
+    [Tags]             404_enable
     
     ${partner}        Factory 404 Partner
 
@@ -45,7 +45,7 @@ Should Return 404 On Enable a Partner
 
 Should Return 404 On Disable a Partner
     [Documentation]    Retornar erro caso não encontre o parceiro pelo ID
-    [Tags]             404
+    [Tags]             404_disable
     
     ${partner}        Factory 404 Partner
 
